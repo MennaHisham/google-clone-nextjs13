@@ -5,12 +5,10 @@ import './../globals.css'
 
 export default function SearchLayout({ children }) {
   return (
-    <html lang="en">
-      <body>
+      <div>
         {children}
         <SearchHeader/>
         {/* <Footer/> */}
-      </body>
-    </html>
+      </div>
   )
 }
