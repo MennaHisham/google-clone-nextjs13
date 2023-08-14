@@ -6,8 +6,8 @@ import './../globals.css'
 export default function SearchLayout({ children }) {
   return (
       <div>
-        {children}
         <SearchHeader/>
+        {children}
         {/* <Footer/> */}
       </div>
   )
