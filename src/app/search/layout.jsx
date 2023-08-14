@@ -1,3 +1,4 @@
+import SearchHeader from '@/components/SearchHeader'
 import { Inter } from 'next/font/google'
 //import Footer from '../components/Footer'
 
