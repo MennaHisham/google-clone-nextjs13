@@ -21,7 +21,7 @@ export default function SearchBox() {
       <input type="text" value={term} onChange={(e)=>setTerm(e.target.value)} className="w-full focus:outline-none"/>
       <RxCross2 className="mr-3 text-2xl text-gray-500 cursor-pointer sm:mr-2" onClick={()=>setTerm("")} />
       <BsFillMicFill className="hidden pl-4 mr-3 text-4xl text-blue-500 border-l-2 border-gray-300 sm:inline-flex gray-300"/>
-      <AiOutlineSearch className="hidden text-2xl text-blue-500 cursor-pointer sm:inline-flex"/>
+      <AiOutlineSearch className="hidden text-2xl text-blue-500 cursor-pointer sm:inline-flex" onClick={handleSubmit}/>
     </form>
   )
 }
