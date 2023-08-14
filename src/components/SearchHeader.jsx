@@ -4,6 +4,7 @@ import React from 'react'
 import SearchBox from './SearchBox'
 import {RiSettings3Line} from 'react-icons/ri'
 import {TbGridDots} from 'react-icons/tb'
+import SearchHeaderOptions from './SearchHeaderOptions'
 
 export default function SearchHeader() {
   return (
@@ -22,6 +23,7 @@ export default function SearchHeader() {
         </div>
         <button className="px-6 py-2 ml-2 font-medium text-white transition-all bg-blue-500 rounded-md hover:brightness-105 hover:shadow-md">Sign in</button>
       </div>
+      <SearchHeaderOptions/>
     </header>
   )
 }
