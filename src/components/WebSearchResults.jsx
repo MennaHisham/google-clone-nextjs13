@@ -8,16 +8,16 @@ export default function WebSearchResults({results}) {
         About {results.searchInformation.formattedTotalResults} results({results.searchInformation.formattedSearchTime} seconds)
       </p>
       {results.items?.map((result) => (
-          <div className="" key={result.link}>
-            <div className="">
-              <Link href={result.link}>
+          <div className="max-w-xl mb-8" key={result.link}>
+            <div className="flex flex-col group">
+              <Link className="text-sm truncate" href={result.link}>
                 {result.formattedUrl}
               </Link>
-              <Link href={result.link}>
+              <Link className="text-xl font-medium text-blue-800 truncate group-hover:underline decoration-blue-800" href={result.link}>
                 {result.title}
               </Link>
             </div>
-            <p>{Parser(result.htmlSnippet)}</p>
+            <p className="text-gray-600">{Parser(result.htmlSnippet)}</p>
           </div>
         ))}
     </div>
