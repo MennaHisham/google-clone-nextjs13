@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Parser from "html-react-parser";
+import PaginationButtons from "./PaginationButtons";
 
 export default function WebSearchResults({results}) {
   return (
-    <div className="w-full px-3 pb-24 mx-auto sm:pl-[5%] md:pl-[14%] lg:pl-52">
+    <div className="w-full px-3 pb-40 mx-auto sm:pl-[5%] md:pl-[14%] lg:pl-52">
       <p className="mt-3 mb-5 text-sm text-gray-600">
         About {results.searchInformation.formattedTotalResults} results({results.searchInformation.formattedSearchTime} seconds)
       </p>
@@ -20,6 +21,7 @@ export default function WebSearchResults({results}) {
             <p className="text-gray-600">{Parser(result.htmlSnippet)}</p>
           </div>
         ))}
+        <PaginationButtons/>
     </div>
   )
 }
