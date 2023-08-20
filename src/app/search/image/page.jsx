@@ -9,7 +9,7 @@ export default async function WebSearchPage({searchParams}) {
   await new Promise((resolve) => setTimeout(resolve,10000))
 
   const response = await fetch(
-    `https://www.googleapis.com/customsearch/v1?key=${process.env.NEXT_PUBLIC_GOOGLE_API_KEY}&cx=${process.env.NEXT_PUBLIC_CONTEXT_KEY}&q=${searchParams.searchTerm}&searchType=image&start=${startIndex}`
+    `${process.env.NEXT_PUBLIC_BASE_URL}?key=${process.env.NEXT_PUBLIC_GOOGLE_API_KEY}&cx=${process.env.NEXT_PUBLIC_CONTEXT_KEY}&q=${searchParams.searchTerm}&searchType=image&start=${startIndex}`
   )
   if(!response.ok){
     throw new Error('Something went wrong');
