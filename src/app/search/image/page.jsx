@@ -31,7 +31,7 @@ export default async function WebSearchPage({searchParams}) {
   }
   return (
     <>
-    {results && <ImageSearchResults results={data}/>}
+    {results && <ImageSearchResults results={data} alt="image-search"/>}
     </>
   )
 }
