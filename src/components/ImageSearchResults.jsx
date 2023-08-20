@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PaginationButtons from "./PaginationButtons";
+import Image from "next/image";
 
 export default function ImageSearchResults({results}){
     return (
@@ -9,7 +10,7 @@ export default function ImageSearchResults({results}){
                     <div key={result.link} className='mb-8'>
                         <div className="group">
                             <Link href={result.image.contextLink}>
-                                <img src={result.link} alt={result.title} className="object-contain w-full transition-shadow h-60 group-hover:shadow-xl"/>
+                                <Image src={result.link} alt={result.title} className="object-contain w-full transition-shadow h-60 group-hover:shadow-xl"/>
                             </Link>
                             <Link href={result.image.contextLink}>
                                 <h2 className="text-xl truncate group-hover:underline">{result.title}</h2>
