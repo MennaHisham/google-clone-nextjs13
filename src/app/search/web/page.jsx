@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default async function WebSearchPage({searchParams}) {
   const startIndex = searchParams.start || "1";
-  await new Promise((resolve) => setTimeout(resolve,10000))
+  await new Promise((resolve) => setTimeout(resolve,2000))
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_BASE_URL}?key=${process.env.NEXT_PUBLIC_GOOGLE_API_KEY}&cx=${process.env.NEXT_PUBLIC_CONTEXT_KEY}&q=${searchParams.searchTerm}&start=${startIndex}`
   )
